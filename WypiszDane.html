@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<!--
+The variables name, surname and age contain your personal data.
+Enter the data and save them in the variables.
+In the enter.html document, write a JavaScript program to display your data both in a popup window and in the console.
+Try to display your personal data in a single line.
+Check the results in the Chrome DevTools.
+
+Część druga - wpisywanie danych w polu tekstowym
+-->
+<html>
+	<head>
+		<title>Moje dane - enter</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Moje dane</h1>
+		<p>Moje dane w wyskakującym okienku</p>
+		
+		<input type="text" id="pole1"> Proszę wpisz w tym polu swoje imię</input>
+		<br>
+		<br>
+		<input type="text" id="pole2"> Proszę wpisz w tym polu swoje nazwisko</input>
+		<br>
+		<br>
+		<input type="submit" id="przycisk" value="zatwierdź dane" onclick="wyswietl()"/>
+
+		<script>
+			// enter your name, surname
+			// ...
+			// display your name and surname in a popup window and on the console
+			// ...
+			function wyswietl(){
+			var imie = document.getElementById("pole1").value;
+			var nazwisko = document.getElementById("pole2").value;
+			window.alert("Twoje imię to : " + imie + ", twoje nazwisko to : " + nazwisko);
+			console.log(imie + " " + nazwisko);
+			}
+			
+			// 
+		</script>
+	</body>
+</html>

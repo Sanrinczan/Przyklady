@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Complete the JavaScript code in the array.html document.
+-->
+</html>
+<html>
+	<head>
+		<title>Create methods</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Create methods</h1>
+
+		<script>
+			var myArray = {
+			
+					arr: [3,4,76,1,5,9999,33,76,1,99,45,235,53,23],
+					
+					max: function(){
+						function compareNr(a, b){
+						return a-b;					
+						}
+						var tab = this.arr.sort(compareNr);
+						return tab[this.arr.length - 1];
+						// maximum value (sort the arr and take the last value, use a built-in function)
+					},		
+					
+					min: function(){
+					function compareNr(a, b){
+						return a-b;					
+						}
+						var tab = this.arr.sort(compareNr);
+						return tab[0];
+						},		
+						
+					avg: function(){
+						var dlugosc = this.arr.length;
+						var s = 0;
+						for (var i=0; i<dlugosc; i++){
+						s = s + this.arr[i];
+						}	
+						var sr = s/(dlugosc);
+						return sr;	
+					},		// avarage value
+					
+					
+					// the number of arr values less than 'val' 
+					lth: function(val){
+						var liczbaWartosci = 0;
+							for(var i =0; i< this.arr.length; i++){
+							if(this.arr[i]<val) liczbaWartosci++;
+							}
+							return liczbaWartosci;
+							}	
+			};
+			
+			// display results (min,max,avg,lth) in the console
+			// ...
+			
+			console.log("MAX: "+myArray.max());
+			console.log("MIN: "+myArray.min());
+			console.log("AVG: "+myArray.avg());
+			console.log("LTH: "+myArray.lth(9999));
+			console.log(myArray.lth(0));
+			console.log(myArray.lth(50));
+		</script>
+	</body>
+</html>
+<!--
+function compareNr(a, b) {
+    return a - b
+}
+
+const tab = [100, 320, 10, 25, 310, 1200, 400];
+
+const tab2 = tab.sort();
+console.log( tab2 ); //10,100,1200,25,310,320,400
+
+const tab3 = tab.sort(compareNr);
+console.log( tab3 ); //10,25,100,310,320,400,1200
+-->

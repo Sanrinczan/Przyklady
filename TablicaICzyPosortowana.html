@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+An array of 5 elements includes random integers in the range of 1 to 5. 
+To create a random number, use Math.random() function.
+Check whether the array is sorted, i.e. each element of the array is not smaller than its predecessor.
+Complete array.html with a JavaScript code.
+Display in the console the array elements and information whether the array is sorted.
+-->
+
+<html>
+	<head>
+		<title>Array checker</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Array checker</h1>
+		<p>Display results on the console</p>
+
+		<script>
+			var tab = [null, null, null, null, null];
+			var i;
+
+			//var tab = [1,1,1,1,2]
+			// assing random integers to array elements
+			for (i = 0; i < tab.length; i++) {
+			tab[i] = Math.floor(Math.random()*5)+1;
+			}
+
+			// show array elements
+			console.log('Array elements:');
+			'<br>'
+			for (i = 0; i < tab.length; i++){
+			console.log(tab[i]);
+			}
+			// ...
+			// check whether the array is ordered
+			var numer = 0;
+			// ilosc elementow w tablicy to 5
+			for (i = 0; i < (tab.length-1); i++){
+			if (tab[i] <= tab[i+1])
+			{
+			  numer++;
+			}
+			}
+			if (numer == (tab.length-1))
+			{console.log("ta tablica jest posortowana");} 			// display message: Array is ordered / unordered
+			else {console.log("ta tablica NIE jest posortowana");}
+			
+		</script>
+	</body>
+</html>
